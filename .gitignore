@@ -53,6 +53,7 @@
 # OSX dir files
 .DS_Store
 
+<<<<<<< HEAD
 ## Caffe
 
 # User's build configuration
@@ -97,3 +98,9 @@ LOCK
 LOG*
 CURRENT
 MANIFEST-*
+=======
+*.bin*
+
+*.jpg
+*.png
+>>>>>>> upstream/master

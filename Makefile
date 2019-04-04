@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 PROJECT := caffe
 
 CONFIG_FILE := Makefile.config
@@ -707,3 +708,15 @@ $(DISTRIBUTE_DIR): all py | $(DISTRIBUTE_SUBDIRS)
 	cp -r python $(DISTRIBUTE_DIR)/
 
 -include $(DEPS)
+=======
+CC = g++
+CFLAGS = -g -Wall -std=c++11
+SRCS = $(shell find . -name "*.cpp")
+PROG = ${SRCS:.cpp=.bin}
+
+OPENCV = `pkg-config opencv4 --cflags --libs`
+LIBS = $(OPENCV)
+
+$(PROG):$(SRCS)
+	@$(CC) $(CFLAGS) -o $(PROG) $(SRCS) $(LIBS)
+>>>>>>> upstream/master
